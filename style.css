@@ -18,7 +18,7 @@
 }
 
 /* Importing a Google Font */
-@import url('https://fonts.google.com/specimen/Hanken+Grotesk');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
 
 /* Resetting default styles */
 * {
@@ -34,38 +34,34 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: var(--white);
+  background-color: rgb(193, 223, 227);
   font-family: 'Hanken Grotesk', sans-serif;
 }
 
 /* Main container styling */
 main {
   display: flex;
-  flex-direction: row;
-  width: 650px;
-  max-width: 100%;
-  min-width: 450px;
-  height: 500px;
-  border-radius: 1.5rem;
-  background-color: var(--white);
-  box-shadow: 5px 5px 20px 0px var(--light-lavender);
-  margin: 0;
+  width: 580px;
+  max-width: 95%;
+  height: 400px;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 25px rgba(61, 108, 236, 0.12);
 }
 
 /* Styling for Section 1 - Your Result */
 .part1 {
   width: 50%;
-  box-sizing: border-box;
-  background-color: var(--cobalt-blue);
-  background-image: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
-  border-radius: 1.5rem;
-  padding: 2rem;
-  color: var(--light-lavender);
+  background: linear-gradient(to bottom,
+      var(--light-slate-blue),
+      var(--light-royal-blue));
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  margin: 0;
+  align-items: center;
+  text-align: center;
+  padding: 28px;
+  color: var(--light-lavender);
 }
 
 /* Styling for h1 within Section 1 */
@@ -73,48 +69,47 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 /* Styling for the circle within Section 1 */
-.part1>.circle {
-  height: 12.4rem;
-  width: 12rem;
+.part1 .circle {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  background-color: var(--cobalt-blue);
-  background-image: linear-gradient(to top, var(--violet-blue), var(--persian-blue));
-  margin: auto;
-  margin-top: 2rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  background: linear-gradient(to bottom,
+      var(--violet-blue),
+      var(--persian-blue));
+  margin: 28px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Styling for span and p within the circle */
-.part1>.circle>span {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 4rem;
-  font-size: 3.9rem;
-  font-weight: bold;
-  color: var(--white);
+.part1 .circle span {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1;
 }
 
-.part1>.circle>p {
-  padding-left: 2rem;
+.part1 .circle p {
+  font-size: 0.85rem;
+  color: var(--light-lavender);
 }
 
 /* Styling for h2 within Section 1 */
 .part1>h2 {
   display: flex;
   align-items: center;
-  margin-top: 1rem;
-  font-size: 1.2rem;
   justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   font-size: 1.6rem;
   color: var(--white);
-  margin-bottom: 1rem;
 }
 
 /* Styling for p within Section 1 */
@@ -122,6 +117,8 @@ main {
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.4;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -129,11 +126,8 @@ main {
 /* Styling for Section 2 - Summary */
 .part2 {
   width: 50%;
-  border-radius: 1.5rem;
-  padding: 1.5rem;
+  padding: 28px;
   display: flex;
-  color: hsl(224, 30%, 27%);
-  font-weight: bold;
   flex-direction: column;
 }
 
@@ -143,7 +137,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 14px;
   margin-top: 25px;
   margin-bottom: 25px;
 }
@@ -158,7 +152,8 @@ main {
   align-items: center;
   padding: 10px;
   width: 100%;
-  height: 3.5rem;
+  height: 46px;
+  padding: 0 14px;
   border-radius: 8px;
   justify-content: space-between;
 }
@@ -212,23 +207,37 @@ main {
 
 /* Styling for the score section */
 .score {
-  float: right;
+  font-weight: 700;
+}
 
-  >span {
-    color: gray;
-  }
+
+.score span {
+  color: gray;
 }
 
 /* Styling for the Continue button */
 .submit {
+  width: 100%;
+  height: 48px;
+  margin-top: 1rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  width: 100%;
-  height: 3rem;
-  background-color: hsl(224, 30%, 27%);
+
+  background: var(--dark-gray-blue);
   color: white;
-  border-radius: 2rem;
-  margin-top: 1rem;
+
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--light-slate-blue),
+    var(--light-royal-blue)
+  );
 }
