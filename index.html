@@ -10,11 +10,15 @@
   <!-- Favicon link -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.svg">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
   <!-- External stylesheet link -->
   <link rel="stylesheet" href="style.css">
 
   <!-- Page title -->
-  <title>Document</title>
+  <title>Results Summary Component</title>
 </head>
 
 <body>
@@ -33,11 +37,11 @@
 
     <!-- Section 2 - Summary -->
     <section class="part2">
-      <h1>Summary</h1>
+      <h2>Summary</h2>
       <div class="container">
 
         <!-- Subsection 1 - Reaction -->
-        <div class="first">
+        <div class="summary-item summary-item--reaction">
           <div class="name">
             <img src="./assets/images/icon-reaction.svg" alt="">
             <p>Reaction</p>
@@ -49,7 +53,7 @@
         </div>
 
         <!-- Subsection 2 - Memory -->
-        <div class="sec">
+        <div class="summary-item summary-item--memory">
           <div class="name">
             <img src="./assets/images/icon-memory.svg" alt="">
             <p>Memory</p>
@@ -61,7 +65,7 @@
         </div>
 
         <!-- Subsection 3 - Verbal -->
-        <div class="third">
+        <div class="summary-item summary-item--verbal">
           <div class="name">
             <img src="./assets/images/icon-verbal.svg" alt="">
             <p>Verbal</p>
@@ -73,7 +77,7 @@
         </div>
 
         <!-- Subsection 4 - Visual -->
-        <div class="fourth">
+        <div class="summary-item summary-item--visual">
           <div class="name">
             <img src="./assets/images/icon-visual.svg" alt="">
             <p>Visual</p>
@@ -87,8 +91,9 @@
       </div>
 
       <!-- Continue button -->
-      <div class="submit">Continue</div>
-
+      <button class="submit" type="button">
+        Continue
+      </button>
     </section>
 
   </main>
