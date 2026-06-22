@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    min-height: 100vh;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: hsl(228, 12%, 48%);
+
+}
+
+h1 {
+    font-family: "Fraunces", serif;
+    color: hsl(212, 21%, 14%);
+    font-size: 2rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+article {
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    width: min(90%, 600px);
+}
+
+img {
+    flex: 1 0 50%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.category {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.product-desc {
+    padding: 35px;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.sale-price {
+    font-family: "Fraunces", serif;
+    color: hsl(158, 36%, 37%);
+    font-size: 1.7rem;
+    margin-right: 20px;
+}
+
+.list-price {
+    text-decoration: line-through;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    padding: 20px;
+    border-style: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button:hover {
+    background-color: hsl(158, 45%, 20%);
+}
+
+button:active {
+    background-color: hsl(158, 45%, 20%);
+}
+
+button:focus-visible {
+    outline: 3px solid hsl(158, 36%, 37%);
+    outline-offset: 3px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(158, 36%, 37%);
+}
+
+@media only screen and (max-width: 600px) {
+    article {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    h1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .prices {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    img {
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+    }
+}
