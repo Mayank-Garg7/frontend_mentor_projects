@@ -1,69 +1,74 @@
-# Frontend Mentor - Product preview card component solution
+# Product Preview Card Component
 
-This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa).
+This is a solution to the **Product Preview Card Component challenge** from [Frontend Mentor](https://www.frontendmentor.io).  
+It is a simple, responsive product card built using HTML and CSS.
 
-## Table of contents
+---
 
-- [Frontend Mentor - Product preview card component solution](#frontend-mentor---product-preview-card-component-solution)
-  - [Table of contents](#table-of-contents)
-  - [Overview](#overview)
-    - [The challenge](#the-challenge)
-    - [Screenshot](#screenshot)
-    - [Links](#links)
-  - [My process](#my-process)
-    - [Built with](#built-with)
-    - [What I learned](#what-i-learned)
-    - [Useful resources](#useful-resources)
-  - [Author](#author)
+## 📸 Screenshot
+### Desktop Preview
 
-## Overview
+<img width="1297" height="628" alt="dfkjajfdjfjdsj ffj" src="https://github.com/user-attachments/assets/24d95d74-fe70-4e93-a56f-e603e9c8d6c6" />
 
-### The challenge
+---
+### Mobile Preview
+<p align="center">
+<img width="191" height="420" alt="modjfdjfja" src="https://github.com/user-attachments/assets/cbcd4bd9-5d80-4284-99e9-79f14c2740b1" />
+</p>
 
-Users should be able to:
+---
 
-- View the optimal layout depending on their device's screen size
-- See hover and focus states for interactive elements
+## 🔗 Live Demo
 
-### Screenshot
+- Live Site URL: [Add your live URL here](#)
 
-![](screenshots/product-prev-desktop-screen.png)
-![](screenshots/product-prev-mobile-screen.png)
+---
 
-### Links
+## 🚀 Features
 
-- Solution URL: [Solution](https://github.com/maudlinmandrake/product-preview-card-component)
-- Live Site URL: [Live](https://maudlinmandrake.github.io/product-preview-card-component)
+- Responsive product card layout
+- Mobile-friendly design
+- Clean and modern UI
+- Hover and active button states
+- Accessible image with proper alt text
+- Semantic HTML structure
 
-## My process
+---
 
-### Built with
+## 🛠️ Built With
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- Visual Studio Code
+- HTML5
+- CSS3 (Flexbox, Media Queries)
+- Google Fonts (Fraunces, Montserrat)
+- Font Awesome (for cart icon)
 
-### What I learned
+---
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+## 📱 Responsive Design
 
-```html
-<img
-	srcset="images/image-product-desktop.jpg 600w, images/image-product-mobile.jpg 686w"
-	sizes="(max-width: 600px) 686px, 300px"
-	src="images/image-product-desktop.jpg"
-	alt="A bottle of perfume surrounded by foliage"
->
+The layout adapts for:
+- Desktop devices
+- Mobile devices (below 600px)
+
+---
+
+## 📂 Project Structure
+
+```text
+
+│   .gitignore
+│   index.html
+│   README.md
+│   style-guide.md
+│   
+├───images
+│       favicon-32x32.png
+│       favicon.svg
+│       icon-cart.svg
+│       image-product-desktop.jpg
+│       image-product-mobile.jpg
+│       
+└───style
+        style.css
+        
 ```
-
-### Useful resources
-
-- [Complete guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - Great reference for Flexbox
-- [Responsive Images: Reference Guide](https://imagekit.io/responsive-images/) - Extremely comprehensive guide to respomsive images
-
-## Author
-
-- Website - [Jenny Mikac](https://www.jennymikac.com)
-- Frontend Mentor - [@ymaudlinmandrake](https://www.frontendmentor.io/maudlinmandrake)
-- Twitter - [@jennymikac](https://www.twitter.com/jennymikac)
