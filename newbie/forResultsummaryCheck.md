@@ -1,0 +1,1 @@
+https://github.com/shigureyn/results-summary-component/blob/main/index.html

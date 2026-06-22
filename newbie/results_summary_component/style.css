@@ -12,7 +12,7 @@
   --persian-blue: hsla(241, 72%, 46%, 0);
 
   --white: hsl(0, 0%, 100%);
-  --pale-blue: hsl(221, 100%, 96%);
+   --pale-blue: hsl(221, 100%, 96%);
   --light-lavender: hsl(241, 100%, 89%);
   --dark-gray-blue: hsl(224, 30%, 27%);
 }
@@ -31,10 +31,10 @@
 
 body {
   min-height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
+background-color: var(--pale-blue);
 
   padding: 1rem;
 }
@@ -56,7 +56,7 @@ main {
 
 /* Styling for Section 1 - Your Result */
 .part1 {
-  width: 50%;
+  width: 100%;
   background: linear-gradient(to bottom,
       var(--light-slate-blue),
       var(--light-royal-blue));
@@ -129,7 +129,7 @@ height: 9.375rem;
 
 /* Styling for Section 2 - Summary */
 .part2 {
-  width: 50%;
+  width: 100%;
   padding: 28px;
   display: flex;
   flex-direction: column;
@@ -248,17 +248,8 @@ height: 3rem;
   outline-offset: 4px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   main {
     flex-direction: row;
   }
 }
-
-@media (min-width: 768px) {
-  .part1,
-  .part2 {
-    width: 50%;
-  }
-}
-
-
