@@ -1,103 +1,125 @@
-# Frontend Mentor - FAQ Accordion Solution
+# FAQ Accordion
 
-This is a solution to the **FAQ accordion** challenge on Frontend Mentor. The project is built with semantic HTML, responsive CSS, and JavaScript for accordion interactivity.
-
-## Table of contents
-
-* [Overview](#overview)
-
-  * [The challenge](#the-challenge)
-  * [Screenshot](#screenshot)
-  * [Links](#links)
-* [My process](#my-process)
-
-  * [Built with](#built-with)
-  * [What I learned](#what-i-learned)
-  * [Continued development](#continued-development)
-* [Author](#author)
-* [Acknowledgments](#acknowledgments)
+A responsive and accessible FAQ accordion component built with HTML, CSS, and JavaScript.
 
 ## Overview
 
-### The challenge
+This project is a solution to the Frontend Mentor FAQ Accordion challenge. The goal was to build an interactive FAQ section that closely matches the provided design while maintaining accessibility, responsiveness, and clean code practices.
 
-Users should be able to:
+Users can:
 
-* Hide and show the answer to each question
-* View the optimal layout for the interface depending on their device screen size
-* See hover and focus states for interactive elements
-* Navigate the accordion using accessible buttons
+* View frequently asked questions and answers.
+* Expand and collapse FAQ items.
+* Navigate the accordion using a keyboard.
+* Experience a responsive layout across different screen sizes.
 
-### Screenshot
+## Screenshot
 
-![FAQ accordion screenshot](./images/screenshot.jpg)
+![Project Screenshot](./preview.jpg)
 
-### Links
+## Links
 
-* Solution URL: https://github.com/shigureyn/faq-accordion.git
-* Live Site URL: https://shigureyn.github.io/faq-accordion/
+* Solution URL: Add your Frontend Mentor solution URL here
+* Live Site URL: Add your deployed site URL here
 
-## My process
-
-### Built with
+## Built With
 
 * Semantic HTML5
-* CSS custom properties
-* Flexbox
-* CSS Grid
+* Modern CSS
+
+  * CSS Custom Properties
+  * Flexbox
+  * Grid
+  * Logical Properties
+  * Fluid Typography using `clamp()`
+* Vanilla JavaScript
 * Mobile-first workflow
-* Responsive `clamp()` values
-* JavaScript
-* Accessible accordion pattern
-* Local `@font-face` fonts
 
-### What I learned
+## Features
 
-In this project, I practiced building an accessible accordion component with semantic HTML and JavaScript.
+### Accessible Accordion
 
-I used `aria-expanded` to describe the current state of each FAQ button and `aria-controls` to connect each button with its related answer.
+The accordion implementation includes:
 
-```html
-<button
-  class="faq-button"
-  type="button"
-  aria-expanded="false"
-  aria-controls="faq-answer-1"
->
+* `aria-expanded`
+* `aria-controls`
+* `aria-labelledby`
+* Keyboard accessibility
+* Proper use of the `hidden` attribute
+
+### Responsive Design
+
+The layout adapts to different viewport sizes using:
+
+* Fluid spacing
+* Responsive typography
+* Mobile and desktop background images
+
+### Performance
+
+* Local font loading with `font-display: swap`
+* Lightweight JavaScript
+* No external dependencies
+
+## Project Structure
+
+```text
+.
+├── index.html
+├── css
+│   └── style.css
+├── js
+│   └── main.js
+├── images
+│   ├── background-pattern-mobile.svg
+│   ├── background-pattern-desktop.svg
+│   ├── icon-plus.svg
+│   ├── icon-minus.svg
+│   ├── icon-star.svg
+│   └── favicon-32x32.png
+└── fonts
+    ├── WorkSans-VariableFont_wght.ttf
+    └── WorkSans-Italic-VariableFont_wght.ttf
 ```
 
-I also used the `hidden` attribute to make answers hidden by default and then toggled it with JavaScript.
+## What I Learned
+
+During this project, I practiced:
+
+* Creating accessible accordion components.
+* Managing state with JavaScript and ARIA attributes.
+* Using CSS logical properties for better internationalization support.
+* Building responsive layouts with modern CSS techniques.
+* Improving keyboard navigation and focus states.
+
+Example of the accordion toggle logic:
 
 ```js
-button.setAttribute("aria-expanded", String(!isExpanded));
+const isExpanded =
+  button.getAttribute("aria-expanded") === "true";
+
+button.setAttribute(
+  "aria-expanded",
+  String(!isExpanded)
+);
+
 answer.hidden = isExpanded;
 ```
 
-For the layout, I used responsive CSS with `clamp()` to make spacing, typography, and card sizing adapt smoothly between mobile and desktop screens.
+## Continued Development
 
-```css
-.faq {
-  inline-size: 100%;
-  max-inline-size: 37.5rem;
-  padding: clamp(1.5rem, 1.148rem + 1.5vw, 2.5rem);
-}
-```
+Future improvements could include:
 
-### Continued development
-
-In future projects, I want to continue improving:
-
-* Accessible JavaScript components
-* Keyboard-friendly interactive elements
-* Responsive layouts with fewer media queries
-* Clean CSS structure
-* Better usage of ARIA attributes
+* Smooth open/close animations.
+* Support for opening only one accordion item at a time.
+* Additional keyboard navigation shortcuts.
+* Dark mode support.
 
 ## Author
 
-* GitHub - [@shigureyn](https://github.com/shigureyn)
-* Frontend Mentor - [@shigureyn](https://www.frontendmentor.io/profile/shigureyn)
+* GitHub - [Mayank-Garg7](https://github.com/mayank-garg7)
+* Frontend Mentor - [@Mayank-Garg7](https://www.frontendmentor.io/profile/Mayank-Garg7)
 
 ## Acknowledgments
 
-Thanks to Frontend Mentor for providing this challenge and design resources.
+Thanks to Frontend Mentor for providing realistic frontend challenges that help developers improve their HTML, CSS, and JavaScript skills.
