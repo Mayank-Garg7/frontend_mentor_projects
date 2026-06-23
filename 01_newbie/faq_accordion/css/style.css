@@ -1,206 +1,275 @@
+/* -------------------- */
+/* Fonts */
+/* -------------------- */
+
 
 @font-face {
-  font-family: "Work Sans";
-  src: url("../fonts/WorkSans-Italic-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
+font-family: "Work Sans";
+src: url("../fonts/WorkSans-Italic-VariableFont_wght.ttf") format("truetype");
+font-weight: 100 900;
+font-style: italic;
+font-display: swap;
 }
 
+/* -------------------- */
+/* Custom Properties */
+/* -------------------- */
+
 :root {
-  --white: hsl(0, 100%, 100%);
-  --purple-100: hsl(275, 100%, 97%);
-  --purple-600: hsl(292, 16%, 49%);
-  --purple-950: hsl(292, 42%, 14%);
-  --purple-hover: hsl(281, 83%, 54%);
-  --shadow: hsl(292 42% 14% / 0.12);
+--color-white: hsl(0 100% 100%);
+--color-purple-100: hsl(275 100% 97%);
+--color-purple-600: hsl(292 16% 49%);
+--color-purple-950: hsl(292 42% 14%);
+--color-purple-hover: hsl(281 83% 54%);
+--color-shadow: hsl(292 42% 14% / 0.12);
 }
+
+/* -------------------- */
+/* Reset */
+/* -------------------- */
 
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+box-sizing: border-box;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-block-size: 100svh;
-  font-family: "Work Sans", Arial, sans-serif;
-  font-size: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(---purple-950);
-  background-color: var(--purple-100);
-}
-
-button {
-  font: inherit;
-  cursor: pointer;
-}
-
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
+body,
+h1,
+h2,
+p {
+margin: 0;
 }
 
 img,
 svg {
-  display: block;
-  max-inline-size: 100%;
+display: block;
+max-inline-size: 100%;
 }
+
+button {
+font: inherit;
+cursor: pointer;
+}
+
+button,
+a {
+-webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent hidden elements from displaying */
+
+[hidden] {
+display: none !important;
+}
+
+/* -------------------- */
+/* Base */
+/* -------------------- */
+
+body {
+display: flex;
+flex-direction: column;
+min-block-size: 100svh;
+
+font-family: "Work Sans", Arial, sans-serif;
+font-size: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
+font-weight: 400;
+line-height: 1.5;
+
+color: var(--color-purple-950);
+background-color: var(--color-purple-100);
+}
+
+/* -------------------- */
+/* Layout */
+/* -------------------- */
 
 .page {
-  flex: 1;
-  display: grid;
-  place-items: center;
-  padding-inline: clamp(1.5rem, 1.324rem + 0.75vw, 2rem);
-  padding-block: clamp(2rem, 1.824rem + 0.75vw, 2.5rem);
-  background-image: url("../images/background-pattern-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100% auto;
+flex: 1;
+
+display: grid;
+place-items: center;
+
+padding-inline: clamp(1.5rem, 1.324rem + 0.75vw, 2rem);
+padding-block: clamp(2rem, 1.824rem + 0.75vw, 2.5rem);
+
+background-image: url("../images/background-pattern-mobile.svg");
+background-repeat: no-repeat;
+background-position: top center;
+background-size: 100% auto;
 }
 
+/* -------------------- */
+/* FAQ Card */
+/* -------------------- */
+
 .faq {
-  inline-size: 100%;
-  max-inline-size: 37.5rem;
-  padding: clamp(1.5rem, 1.148rem + 1.5vw, 2.5rem);
-  border-radius: clamp(0.5rem, 0.324rem + 0.75vw, 1rem);
-  background-color: var(--white);
-  box-shadow: 0 2rem 4rem var(--shadow);
+inline-size: 100%;
+max-inline-size: 37.5rem;
+
+padding: clamp(1.5rem, 1.148rem + 1.5vw, 2.5rem);
+
+border-radius: clamp(0.5rem, 0.324rem + 0.75vw, 1rem);
+
+background-color: var(--color-white);
+box-shadow: 0 2rem 4rem var(--color-shadow);
 }
 
 .faq-header {
-  display: flex;
-  align-items: center;
-  column-gap: clamp(1.5rem, 1.324rem + 0.75vw, 2rem);
-  margin-block-end: clamp(1.5rem, 1.324rem + 0.75vw, 2rem);
+display: flex;
+align-items: center;
+gap: clamp(1.5rem, 1.324rem + 0.75vw, 2rem);
+
+margin-block-end: clamp(1.5rem, 1.324rem + 0.75vw, 2rem);
 }
 
 .faq-star {
-  flex: 0 0 auto;
-  inline-size: clamp(1.5rem, 1.148rem + 1.5vw, 2.5rem);
-  block-size: clamp(1.5rem, 1.148rem + 1.5vw, 2.5rem);
+flex: 0 0 auto;
+
+inline-size: clamp(1.5rem, 1.148rem + 1.5vw, 2.5rem);
+block-size: clamp(1.5rem, 1.148rem + 1.5vw, 2.5rem);
 }
 
 .faq-title {
-  font-size: clamp(2rem, 1.472rem + 2.25vw, 3.5rem);
-  font-weight: 700;
-  line-height: 1;
+font-size: clamp(2rem, 1.472rem + 2.25vw, 3.5rem);
+font-weight: 700;
+line-height: 1;
 }
 
+/* -------------------- */
+/* FAQ Items */
+/* -------------------- */
+
 .faq-list {
-  display: grid;
+display: grid;
 }
 
 .faq-item {
-  padding-block: clamp(1.25rem, 1.162rem + 0.375vw, 1.5rem);
-  border-block-start: 1px solid var(--purple-100);
+padding-block: clamp(1.25rem, 1.162rem + 0.375vw, 1.5rem);
+border-block-start: 1px solid var(--color-purple-100);
 }
 
 .faq-item:first-child {
-  padding-block-start: 0;
-  border-block-start: 0;
+padding-block-start: 0;
+border-block-start: 0;
 }
 
 .faq-item:last-child {
-  padding-block-end: 0;
+padding-block-end: 0;
 }
 
 .faq-question {
-  font-size: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
-  line-height: 1.2;
+font-size: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
+line-height: 1.2;
 }
 
 .faq-button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  column-gap: clamp(1.5rem, 1.324rem + 0.75vw, 2rem);
-  inline-size: 100%;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  color: var(---purple-950);
-  background-color: transparent;
-  text-align: start;
-  cursor: pointer;
-  transition: color 0.2s ease;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+gap: clamp(1.5rem, 1.324rem + 0.75vw, 2rem);
+
+inline-size: 100%;
+
+padding: 0;
+border: 0;
+
+color: var(--color-purple-950);
+background-color: transparent;
+
+text-align: start;
+
+transition: color 0.2s ease;
 }
 
 .faq-button__text {
-  font-weight: 600;
+font-weight: 600;
 }
 
 .faq-button:focus-visible {
-  outline: 2px solid var(--purple-hover);
-  outline-offset: 0.25rem;
+outline: 2px solid var(--color-purple-hover);
+outline-offset: 0.25rem;
+border-radius: 0.25rem;
 }
 
 .faq-icon {
-  display: block;
-  flex: 0 0 auto;
-  inline-size: 1.875rem;
-  block-size: 1.875rem;
-  background-image: url("../images/icon-plus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+flex: 0 0 auto;
+
+inline-size: 1.875rem;
+block-size: 1.875rem;
+
+background-image: url("../images/icon-plus.svg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
 }
 
 .faq-button[aria-expanded="true"] .faq-icon {
-  background-image: url("../images/icon-minus.svg");
+background-image: url("../images/icon-minus.svg");
 }
 
 .faq-answer {
-  margin-block-start: clamp(1.5rem, 1.412rem + 0.375vw, 1.75rem);
+margin-block-start: clamp(1.5rem, 1.412rem + 0.375vw, 1.75rem);
 }
 
 .faq-answer__text {
-  line-height: 1.5;
-  color: var(---purple-600);
+color: var(--color-purple-600);
+line-height: 1.5;
 }
 
+/* -------------------- */
+/* Attribution */
+/* -------------------- */
+
 .attribution {
-  padding: clamp(1rem, 0.824rem + 0.75vw, 1.5rem);
-  font-size: clamp(0.6875rem, 0.6rem + 0.3vw, 0.75rem);
-  text-align: center;
-  color: var(---purple-600);
+padding: clamp(1rem, 0.824rem + 0.75vw, 1.5rem);
+
+font-size: clamp(0.6875rem, 0.6rem + 0.3vw, 0.75rem);
+text-align: center;
+
+color: var(--color-purple-600);
 }
 
 .attribution-link {
-  color: var(---purple-950);
-  font-weight: 600;
+color: var(--color-purple-950);
+font-weight: 600;
+text-decoration: none;
 }
 
 .attribution-link:focus-visible {
-  outline: 2px solid var(--purple-hover);
-  outline-offset: 0.25rem;
+outline: 2px solid var(--color-purple-hover);
+outline-offset: 0.25rem;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .faq-button:hover {
-    color: var(--purple-hover);
-  }
-}
+/* -------------------- */
+/* Hover States */
+/* -------------------- */
 
 @media (hover: hover) and (pointer: fine) {
-  .attribution-link:hover {
-    color: var(--purple-hover);
-  }
+.faq-button:hover,
+.attribution-link:hover {
+color: var(--color-purple-hover);
 }
+}
+
+/* -------------------- */
+/* Reduced Motion */
+/* -------------------- */
 
 @media (prefers-reduced-motion: reduce) {
-  .faq-button{
-    transition: none;
-  }
+.faq-button {
+transition: none;
+}
 }
 
+/* -------------------- */
+/* Desktop */
+/* -------------------- */
+
 @media (min-width: 48rem) {
-  .page {
-    background-image: url("../images/background-pattern-desktop.svg");
-  }
+.page {
+background-image: url("../images/background-pattern-desktop.svg");
+}
 }
