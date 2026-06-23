@@ -1,0 +1,255 @@
+/* Root variables for color values */
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  --white: hsl(0, 0%, 100%);
+   --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+/* Importing a Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+/* Resetting default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+background-color: var(--pale-blue);
+
+  padding: 1rem;
+}
+
+/* Main container styling */
+main {
+  display: flex;
+  flex-direction: column;
+
+  width: min(36rem, 100%);
+  min-height: 25rem;
+
+  background: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+
+  box-shadow: 0 12px 25px rgba(61, 108, 236, 0.12);
+}
+
+/* Styling for Section 1 - Your Result */
+.part1 {
+  width: 100%;
+  background: linear-gradient(to bottom,
+      var(--light-slate-blue),
+      var(--light-royal-blue));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 28px;
+  color: var(--light-lavender);
+}
+
+/* Styling for h1 within Section 1 */
+.part1>h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Styling for the circle within Section 1 */
+.part1 .circle {
+width: 9.375rem;
+height: 9.375rem;
+  border-radius: 50%;
+  background: linear-gradient(to bottom,
+      var(--violet-blue),
+      var(--persian-blue));
+  margin: 28px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for span and p within the circle */
+.part1 .circle span {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1;
+}
+
+.part1 .circle p {
+  font-size: 0.85rem;
+  color: var(--light-lavender);
+}
+
+/* Styling for h2 within Section 1 */
+.part1>h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: var(--white);
+}
+
+/* Styling for p within Section 1 */
+.part1>p {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Styling for Section 2 - Summary */
+.part2 {
+  width: 100%;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for the container within Section 2 */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* Styling for individual sections within the container */
+.summary-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+flex-direction: row;
+  width: 100%;
+ height: 2.875rem;
+
+  padding: 0 14px;
+  border-radius: 8px;
+}
+
+/* Styling for the name section */
+.name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Styling for the image within the name section */
+.name>img {
+  padding-top: 2px;
+  margin-right: 10px;
+}
+
+.summary-item--reaction .name {
+  color: var(--light-red);
+}
+
+.summary-item--memory .name {
+  color: var(--orangey-yellow);
+}
+
+.summary-item--verbal .name {
+  color: var(--green-teal);
+}
+
+.summary-item--visual .name {
+  color: var(--cobalt-blue);
+}
+
+/* Individual background and text color for each section */
+.summary-item--reaction {
+  background-color: hsla(0, 86%, 51%, 0.062);
+}
+
+.summary-item--memory {
+  background-color: hsla(39, 100%, 56%, 0.096);
+}
+
+.summary-item--verbal {
+  background-color: hsla(166, 100%, 37%, 0.062);
+}
+
+.summary-item--visual {
+  background-color: hsla(234, 85%, 45%, 0.075);
+}
+
+/* Styling for the score section */
+.score {
+  font-weight: 700;
+}
+
+
+.score span {
+  color: gray;
+}
+
+/* Styling for the Continue button */
+.submit {
+  width: 100%;
+height: 3rem;
+  margin-top: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--dark-gray-blue);
+  color: white;
+
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--light-slate-blue),
+    var(--light-royal-blue)
+  );
+}
+
+.submit:focus-visible {
+  outline: 3px solid var(--light-slate-blue);
+  outline-offset: 4px;
+}
+
+@media (min-width: 600px) {
+  main {
+    flex-direction: row;
+  }
+}
