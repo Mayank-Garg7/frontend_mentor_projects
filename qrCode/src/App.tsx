@@ -21,7 +21,7 @@ const App = () => {
         </div>
 
         <h1 className='font-bold text-xl m-auto place-self-center-safe'>Improve your front-end skills by building projects</h1>
-        <p className='text-gray-600 justify-self-center'>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+        <p className='text-gray-600 justify-self-center'>Scan the QR code to visit Mayank's profile and take your coding skills to the next level</p>
       </div>
     </div>
   )
