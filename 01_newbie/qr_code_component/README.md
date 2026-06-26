@@ -1,144 +1,75 @@
-# 📱 QR Code Component
+# React + TypeScript + Vite
 
-A clean and responsive **QR Code Component** built with **React**, **Vite**, **TypeScript**, and **Tailwind CSS**. This project is a solution to the Frontend Mentor QR Code Component challenge, focusing on responsive design, modern development practices, and reusable components.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-![Project Preview](./public/preview.png)
+Currently, two official plugins are available:
 
-> ⭐ If you found this project helpful or inspiring, consider giving it a **Star**. Your support motivates me to build and share more amazing projects!
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
----
+## React Compiler
 
-## 🚀 Tech Stack
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-* ⚛️ React
-* ⚡ Vite
-* 🔷 TypeScript
-* 🎨 Tailwind CSS
+## Expanding the ESLint configuration
 
----
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## ✨ Features
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-* Responsive QR Code Card
-* Modern UI with Tailwind CSS
-* Type-safe development using TypeScript
-* Fast development and build process with Vite
-* Clean and maintainable project structure
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
----
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 
-## 📂 Project Structure
-
-```text
-qr-code-component/
-├── public/
-│   ├── favicon.ico
-│   └── image-qr-code.png
-├── src/
-│   ├── assets/
-│   ├── components/
-│   │   └── QRCard.tsx
-│   ├── App.tsx
-│   ├── main.tsx
-│   └── index.css
-├── package.json
-├── tailwind.config.js
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
 ```
 
----
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-## 🛠️ Getting Started
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-### 1. Clone the repository
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 
-```bash
-git clone <repository-url>
 ```
-
-### 2. Navigate to the project folder
-
-```bash
-cd qr-code-component
-```
-
-### 3. Install dependencies
-
-```bash
-npm install
-```
-
-### 4. Start the development server
-
-```bash
-npm run dev
-```
-
-The application will be available at:
-
-```text
-http://localhost:5173
-```
-
----
-
-## 📦 Build for Production
-
-```bash
-npm run build
-```
-
-To preview the production build:
-
-```bash
-npm run preview
-```
-
----
-
-## 🎨 Customization
-
-You can easily customize this project by:
-
-* Replacing the QR code image.
-* Updating the heading and description text.
-* Changing colors, spacing, and typography using Tailwind CSS.
-* Extending the component with additional functionality.
-
----
-
-## 📸 Preview
-
-> Add your project screenshot here.
-
-```text
-public/preview.png
-```
-
----
-
-## 🎯 Challenge
-
-This project is based on the **Frontend Mentor QR Code Component Challenge**, designed to improve HTML, CSS, and responsive UI development skills while practicing modern React development.
-
----
-
-## 🤝 Contributing
-
-Contributions, suggestions, and improvements are always welcome.
-
-1. Fork the repository
-2. Create a new feature branch
-3. Commit your changes
-4. Push your branch
-5. Open a Pull Request
-
----
-
-## 👨‍💻 Author
-
-**Mayank Garg**
-
-If you enjoyed this project, don't forget to ⭐ the repository!
