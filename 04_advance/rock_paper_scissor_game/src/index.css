@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 48%, 15%));
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+.winner-glow {
+  box-shadow:
+    0 0 0 40px rgba(255,255,255,0.03),
+    0 0 0 80px rgba(255,255,255,0.025),
+    0 0 0 130px rgba(255,255,255,0.015);
+}
+
+@media (min-width: 1024px) {
+  .winner-glow {
+    box-shadow:
+      0 0 0 60px rgba(255,255,255,0.04),
+      0 0 0 120px rgba(255,255,255,0.03),
+      0 0 0 200px rgba(255,255,255,0.015);
+  }
+}
