@@ -1,33 +1,34 @@
-import React from 'react'
-import image from './assets/images/bg-sidebar-desktop.svg'
-
+import React from "react";
+// import background from "./assets/images/";
 
 const App = () => {
-  console.log(image)
+  // console.log(background)
   return (
-    <div className="bg-blue-100 min-h-screen text-black flex">
-      <div className="bg-white m-auto">
+    <div className="bg-blue-100 min-h-screen flex items-center justify-center">
+      <div className="bg-white p-4 flex rounded-xl shadow-lg">
         <div
+          className="w-72 h-137.5 p-8 text-white"
           style={{
-            width: "300px",
-            height: "500px",
-            backgroundImage: `url(${image})`,
+            backgroundImage: "url('/bg-sidebar-desktop.svg')",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            border: "1px solid red",
+            backgroundPosition: "center",
           }}
         >
-          {/* <img src={image} alt="" /> */}
-          <ul>
-            <li><span>1</span> <div>STEP 1</div><p>YOUR INFO</p></li>
-            <li><span>2</span> <div>STEP 2</div><p>SELECT PLAN</p></li>
-            <li><span>3</span> <div>STEP 3</div><p>ADD-ONS</p></li>
-            <li><span>4</span> <div>STEP 4</div><p>SUMMARY</p></li>
+          <ul className="space-y-8">
+            <li><span>1</span> STEP 1 - YOUR INFO</li>
+            <li><span>2</span> STEP 2 - SELECT PLAN</li>
+            <li><span>3</span> STEP 3 - ADD-ONS</li>
+            <li><span>4</span> STEP 4 - SUMMARY</li>
           </ul>
         </div>
-      </div>
-    </div >
-  )
-}
 
-export default App
+        <div className="p-10">
+          {/* Right side content */}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;
