@@ -10,7 +10,7 @@ const RightSideRendering = () => {
           <p className='text-gray-400 text-lg'>Please provide you name, email address, and phone number.</p>
         </div>
         <Input />
-        <Input />
+        <Input name="Email Address"  />
       </form>
     </div>
   )
