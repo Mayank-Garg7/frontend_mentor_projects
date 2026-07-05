@@ -3,6 +3,21 @@
         "id": 1,
         "name": "Name",
         "type": "text",
-        "placeholder": "Mayank Garg"
+        "placeholder": "Mayank Garg",
+        "isNeeded": true
+    },
+    {
+        "id": 2,
+        "name": "Email Address",
+        "type": "email",
+        "placeholder": "mayank23435@gmail.com",
+        "isNeeded": true
+    },
+    {
+        "id": 3,
+        "name": "Phone Number",
+        "type": "tel",
+        "placeholder": "e.g. +123-456-7890",
+        "isNeeded": true
     }
 ]
