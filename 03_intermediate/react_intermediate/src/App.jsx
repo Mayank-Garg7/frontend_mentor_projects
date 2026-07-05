@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <div className="bg-blue-100 min-h-screen flex items-center justify-center">
-        <div className="bg-white p-4 flex rounded-xl shadow-lg gap-15">
+        <div className="bg-white p-4 flex rounded-xl shadow-lg ">
 
           {/*Left side content*/}
           <LeftNavigation />
