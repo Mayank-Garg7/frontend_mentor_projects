@@ -3,7 +3,6 @@
         "id": 1,
         "name": "Name",
         "type": "text",
-        "placeholder": "Mayank Garg",
-        ""
+        "placeholder": "Mayank Garg"
     }
 ]
